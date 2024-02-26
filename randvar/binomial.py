@@ -6,7 +6,7 @@ from .random_variable import RandomVariable
 class Binomial(RandomVariable):
     def __init__(self, n, probability):
         self.n = n
-        self.probability = probability
+        self.probability = np.array(probability)
         super().__init__(np.arange(n + 1), [self.pmf(i) for i in range(n + 1)])
 
     def pmf(self, k):

@@ -4,8 +4,8 @@ from .random_variable import RandomVariable
 
 class Bernoulli(RandomVariable):
     def __init__(self, p):
-        super().__init__([0, 1], [1-p, p])
         self.probability = p
+        super().__init__(np.array([0, 1]), np.array([1-p, p]))
 
     def mean(self):
         return self.probability
