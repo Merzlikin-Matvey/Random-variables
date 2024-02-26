@@ -18,13 +18,7 @@ class RandomVariable:
     def get_value(self):
         return np.random.choice(self.values, p=self.probabilities)
 
-    def set_vales(self, values):
-        self.values = values
-
-    def set_probabilities(self, probabilities):
-        self.probabilities = probabilities
-
-    def expected_value(self):
+    def mean(self):
         return np.sum(self.values * self.probabilities)
 
     def variance(self):
